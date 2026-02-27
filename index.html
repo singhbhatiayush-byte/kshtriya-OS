@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kshatriya Core | OS Zenith</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="boot-screen">
+        <div class="loader-content">
+            <h1 class="glitch" data-text="KSHATRIYA CORE">KSHATRIYA CORE</h1>
+            <p>Initializing Neural Kernel...</p>
+            <div class="load-bar"><div class="progress"></div></div>
+        </div>
+    </div>
+
+    <div id="desktop">
+        <canvas id="matrix-bg"></canvas>
+        
+        <header id="top-bar">
+            <div class="sys-info">System: <span id="cpu-load">0%</span> | RAM: <span id="ram-usage">0%</span></div>
+            <div id="clock-display">00:00:00</div>
+        </header>
+
+        <main id="window-container">
+            <div class="window active" id="mission-win">
+                <div class="win-header">
+                    <span>MISSION_CONTROL_v4.0</span>
+                    <div class="win-btns"><span>_</span><span>□</span><span onclick="toggleApp('mission-win')">×</span></div>
+                </div>
+                <div class="win-body">
+                    <div class="dashboard-grid">
+                        <div class="dash-card">
+                            <h3>JEE Prep Tracker</h3>
+                            <ul id="goal-list"></ul>
+                            <div class="input-group">
+                                <input type="text" id="goal-input" placeholder="New Target...">
+                                <button onclick="addGoal()">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <nav id="dock">
+            <div class="dock-icon" onclick="toggleApp('mission-win')" title="Mission Control">📊</div>
+            <div class="dock-icon" onclick="location.reload()" title="Reboot System">🔄</div>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
