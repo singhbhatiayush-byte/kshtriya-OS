@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kshatriya OS | Command Center</title>
+    <style>
+        :root {
+            --bg: #0a0a0b;
+            --accent: #ff4d00;
+            --text: #e0e0e0;
+            --card-bg: #16161a;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .header-logo {
+            width: 80px;
+            height: 80px;
+            fill: var(--accent);
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 10px rgba(255, 77, 0, 0.5));
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .status-bar {
+            background: var(--card-bg);
+            padding: 10px 20px;
+            border-radius: 50px;
+            border: 1px solid #333;
+            display: inline-block;
+            margin-bottom: 40px;
+            font-family: monospace;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            width: 100%;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 4px solid var(--accent);
+            transition: transform 0.3s ease;
+            text-align: left;
+        }
+
+        .card:hover {
+            transform: translateY(-5-px);
+            background: #1c1c22;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: var(--accent);
+        }
+
+        .footer {
+            margin-top: auto;
+            padding: 40px;
+            opacity: 0.5;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <svg class="header-logo" viewBox="0 0 24 24">
+            <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/>
+        </svg>
+
+        <h1>Kshatriya OS</h1>
+        <div class="status-bar">SYSTEM STATUS: OPTIMIZED | FOCUS: 100%</div>
+
+        <div class="grid">
+            <div class="card">
+                <h3>Dharma</h3>
+                <p>Aligning daily execution with long-term purpose. Order over chaos.</p>
+            </div>
+            <div class="card">
+                <h3>Shakti</h3>
+                <p>Physical and mental fortitude. Building the vessel for greatness.</p>
+            </div>
+            <div class="card">
+                <h3>Ekagrata</h3>
+                <p>Single-pointed focus. Eliminating the noise of the digital age.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        &copy; 2026 Kshatriya Core | Built for the Disciplined Mind
+    </footer>
+
+</body>
+</html>
